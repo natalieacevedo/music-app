@@ -8,7 +8,7 @@ function SongCardLyrics({ artist, title }) {
   const sendGetRequest = async () => {
     try {
       const resp = await axios.get(
-        `https://api.lyrics.ovh/v1/Adele/someone like you`
+        `https://api.lyrics.ovh/v1/${artist}/${title}`
       );
       const RespData = resp.data.lyrics.slice(22);
       setLyrics(RespData);

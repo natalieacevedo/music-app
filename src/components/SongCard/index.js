@@ -5,52 +5,36 @@ import { useParams } from "react-router-dom";
 import axios from "axios";
 
 function SongCard() {
-  /*
-  console.log("hola");
-  let songId = 3135556;
+  let songId = useParams().id;
 
+  let [loading, setLoading] = useState(true);
   let [songInfo, setSongInfo] = useState([]);
-
-  // };
   function getAllSongInfo() {
-    // axios.get(`https://cors-anywhere.herokuapp.com/https://api.deezer.com/track/${songId}`)
+    setLoading(true);
     axios
       .get(`https://api.deezer.com/track/${songId}`)
       .then((resp) => {
-        // console.log(resp.data);
         setSongInfo(resp.data);
+        setLoading(false);
       })
-      .catch((err) => {
-        // Handle Error Here
-        console.error(err);
-      });
+      .catch((err) => {});
   }
-
-  // getAllSongInfo();
-
   useEffect(() => {
-    console.log(`mount`);
     getAllSongInfo();
   }, []);
 
-  // let artistName = songInfo.contributors[0].name;
-  // console.log(artistName);
-  // console.log(songInfo.contributors[0].name);
-  //console.log(songInfo.contributors[0].name);
-*/
-  //   console.log(songInfo.title);
-
-  return (
-    <>
-      <SongCardLyrics />
-
-      {/* <SongCardHeader />
-      <SongCardLyrics
-        title={songInfo.title}
-        artist={songInfo.contributors[0].name}
-      /> */}
-    </>
-  );
+  if (loading) {
+    return <div>Loading...</div>;
+  } else {
+    return (
+      <div>
+        <SongCardLyrics
+          title={songInfo.title}
+          artist={songInfo.contributors[0].name}
+        />
+      </div>
+    );
+  }
 }
 
 export default SongCard;
