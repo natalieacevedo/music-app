@@ -1,4 +1,31 @@
 function SongCardHeader() {
-  return <div>song card header</div>;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  return (
+    
+    <div>
+    
+    
+    
+    
+    
+    
+    
+    
+  
+  </div>);
 }
 export default SongCardHeader;
