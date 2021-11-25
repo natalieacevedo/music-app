@@ -1,6 +1,6 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import SearchPage from './components/SearchPage/';
-import SongCard from './components/SongCard';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import SearchPage from "./components/SearchPage/";
+import SongCard from "./components/SongCard";
 
 function App() {
   return (
