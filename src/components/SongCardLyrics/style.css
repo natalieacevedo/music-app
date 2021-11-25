@@ -1,12 +1,29 @@
 .lyrics-con {
   white-space: pre-line;
-  color: black;
-  display: -webkit-box;
-  -webkit-line-clamp: 10;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  width: 50vw;
+  display: flex;
+  justify-content: center;
+  height: 80vh;
+  /* position: absolute; */
+  color: white;
+  background-color: rgba(0, 0, 0, 0.685);
+  width: 100%;
+}
 
-  border-radius: 25px;
-  padding: 1rem;
+.close-lyr {
+  right: 0;
+  position: absolute;
+  cursor: pointer;
+}
+
+.text-wrap {
+  background-color: #7d8136;
+  width: 80%;
+  overflow: auto;
+}
+.container {
+  position: absolute;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
