@@ -1,10 +1,7 @@
 import { useState } from 'react';
 import './style.css';
-function SearchBar() {
-  const [nameTyped, setNameTyped] = useState('');
-  function handleInputChange(e) {
-    setNameTyped(e.target.value);
-  }
+function SearchBar(props) {
+  const { nameTyped, setNameTyped, handleInputChange } = props;
   return (
     <div className="search-bar-holder">
       <div className="search-icon-holder">
