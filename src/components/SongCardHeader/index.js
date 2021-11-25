@@ -1,9 +1,9 @@
-import React from "react";
-import "./style.css";
-import image from "../../images/Better-Call-Saul.jpeg";
+import React from 'react';
+import './style.css';
+import image from '../../images/Better-Call-Saul.jpeg';
 function SongCardHeader({ image, title, artist, preview, allSong }) {
   function handleButtonClick() {
-    window.open(allSong, "_blank");
+    window.open(allSong, '_blank');
   }
   return (
     <div className="songCardHeaderMain">

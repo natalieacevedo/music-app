@@ -1,8 +1,9 @@
-import SongCardLyrics from "../SongCardLyrics";
-import SongCardHeader from "../SongCardHeader";
-import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
-import axios from "axios";
+import SongCardLyrics from '../SongCardLyrics';
+import SongCardHeader from '../SongCardHeader';
+import Album from '../Album';
+import { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
+import axios from 'axios';
 
 function SongCard() {
   let songId = useParams().id;
@@ -40,6 +41,7 @@ function SongCard() {
           title={songInfo.title}
           artist={songInfo.contributors[0].name}
         />*/}
+        <Album albumId={songInfo.album.id} />
       </div>
     );
   }
