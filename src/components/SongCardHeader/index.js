@@ -20,8 +20,8 @@ function SongCardHeader({image,title,artist}) {
     
     <div>
       <img src={image} alt='band coolpic'></img>
-      <title style={{float:'right'}}>{title}</title>
-      <artist>{artist}</artist>
+      <h3>{title}</h3>
+      <h3>{artist}</h3>
   </div>);
 }
 export default SongCardHeader;

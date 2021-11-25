@@ -32,15 +32,14 @@ function SongCard() {
       });
   }
   
-  // getAllSongInfo();
+  
 
   useEffect(() => {
     console.log(`mount`)
     getAllSongInfo()
   }, []);
-  //imagen={}
+  
  
-  console.log(songInfo);
 
   if (loading) {
     return (
