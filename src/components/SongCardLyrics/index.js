@@ -1,6 +1,34 @@
-function SongCardLyrics({ title, artist }) {
-  console.log(title, artist);
+import React, { useEffect, useState } from "react";
+import "./style.css";
+const axios = require("axios");
 
-  return <div>song lyrics </div>;
+function SongCardLyrics({ artist, title }) {
+  const [lyrics, setLyrics] = useState("");
+
+  const sendGetRequest = async () => {
+    try {
+      const resp = await axios.get(
+        `https://api.lyrics.ovh/v1/${artist}/${title}`
+      );
+      if (resp.data.lyrics.includes("Paroles de la chanson")) {
+        const RespData = resp.data.lyrics.slice(22);
+        setLyrics(RespData);
+      } else {
+        setLyrics(resp.data.lyrics);
+      }
+    } catch (err) {
+      console.error(err);
+    }
+  };
+
+  // console.log("hi");
+
+  useEffect(() => {
+    sendGetRequest();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  return <div className='lyrics-con'>{lyrics}</div>;
 }
+
 export default SongCardLyrics;

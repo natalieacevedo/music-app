@@ -1,11 +1,12 @@
-import SongCardHeader from '../SongCardHeader';
-import SongCardLyrics from '../SongCardLyrics';
-import { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
-import axios from 'axios';
+import SongCardLyrics from "../SongCardLyrics";
+import SongCardHeader from "../SongCardHeader";
+import { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
+import axios from "axios";
 
 function SongCard() {
-  let songId = 3135556;
+  let songId = useParams().id;
+
   let [loading, setLoading] = useState(true);
   let [songInfo, setSongInfo] = useState([]);
   function getAllSongInfo() {
@@ -20,6 +21,7 @@ function SongCard() {
   }
   useEffect(() => {
     getAllSongInfo();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   if (loading) {
@@ -28,6 +30,11 @@ function SongCard() {
     return (
       <div>
         <SongCardLyrics
+          title={songInfo.title}
+          artist={songInfo.contributors[0].name}
+        />
+        <SongCardHeader
+          image={songInfo.album.cover_big}
           title={songInfo.title}
           artist={songInfo.contributors[0].name}
         />
