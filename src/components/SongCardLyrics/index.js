@@ -3,6 +3,7 @@ import "./style.css";
 const axios = require("axios");
 
 function SongCardLyrics({ artist, title }) {
+  console.log(artist, title);
   const [lyrics, setLyrics] = useState("");
 
   const sendGetRequest = async () => {
@@ -15,6 +16,7 @@ function SongCardLyrics({ artist, title }) {
         setLyrics(RespData);
       } else {
         setLyrics(resp.data.lyrics);
+        console.log(resp.data.lyrics);
       }
     } catch (err) {
       console.error(err);
@@ -22,7 +24,9 @@ function SongCardLyrics({ artist, title }) {
   };
 
   useEffect(() => {
-    sendGetRequest();
+    if (artist) {
+      sendGetRequest();
+    }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 

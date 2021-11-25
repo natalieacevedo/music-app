@@ -10,7 +10,7 @@ function SongResultList({ nameTyped }) {
   const [hidden, setHidden] = useState(true);
 
   function fetchApi() {
-    if (nameTyped == "") {
+    if (nameTyped === "") {
       setSongResults([]);
       setHidden(true);
     } else {

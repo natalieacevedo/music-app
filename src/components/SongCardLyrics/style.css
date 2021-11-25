@@ -1,3 +1,12 @@
 .lyrics-con {
   white-space: pre-line;
+  color: black;
+  display: -webkit-box;
+  -webkit-line-clamp: 10;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  width: 50vw;
+
+  border-radius: 25px;
+  padding: 1rem;
 }

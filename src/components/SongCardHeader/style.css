@@ -77,8 +77,12 @@ body {
   }
 }
 /************/
-
+.song-image-container img {
+  width: 100%;
+  height: auto;
+}
 .songCardHeaderMain {
+  align-items: center;
   display: flex;
   flex-direction: column;
   height: 100vh;
@@ -87,18 +91,17 @@ body {
 }
 
 .song-card {
-  width: 100%;
-  border: 1px solid black;
+  max-width: 500px;
+  width: 80%;
+  height: 653px;
+  border: 5px solid #7d8136;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 0.5rem;
 }
-.song-image-container {
-  width: 80%;
-  margin: auto;
-}
-
-.image-song {
-  width: 100%;
+.iconArrow {
+  align-self: flex-start;
 }
 
 .song-title {
@@ -116,9 +119,9 @@ body {
 }
 
 .song-details {
-  margin-left: 10%;
-  margin-top: 2%;
-  margin-bottom: 4%;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 1rem;
 }
 .audio-control {
   display: flex;
@@ -128,13 +131,6 @@ body {
 .audio {
   width: 80vw;
   height: 5vh;
-}
-
-.allSong-button-container {
-  display: flex;
-  flex-direction: row-reverse;
-  margin-right: 10%;
-  margin-top: 10%;
 }
 
 .allSong-button {
@@ -149,30 +145,7 @@ body {
 
     border: 2px solid white;
   }
-  .song-card {
-    width: 100%;
-    border: 1px solid black;
-    display: flex;
-    flex-direction: column;
-    height: 50vh;
-    width: 60vw;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .image-song {
-    height: 60vh;
-  }
-  .song-details {
-    margin-left: 10%;
-    margin-top: 2%;
-    margin-bottom: 2%;
-  }
-  .allSong-button-container {
-    display: flex;
-    flex-direction: row-reverse;
-    margin-right: 10%;
-    margin-top: 5%;
-  }
+
   .audio-control {
     display: flex;
     justify-content: center;

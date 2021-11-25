@@ -23,7 +23,6 @@ function SongCard() {
     getAllSongInfo();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-
   if (loading) {
     return <div>Loading...</div>;
   } else {
@@ -36,10 +35,6 @@ function SongCard() {
           preview={songInfo.preview}
           allSong={songInfo.link}
         />
-        {/*<SongCardLyrics
-          title={songInfo.title}
-          artist={songInfo.contributors[0].name}
-        />*/}
       </div>
     );
   }

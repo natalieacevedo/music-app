@@ -1,5 +1,4 @@
 import React from "react";
-import SongResultsList from "../SongResultsList";
 import { useState } from "react";
 import SearchBar from "../SearchBar";
 import video from "../../assets/videos/background_video.mp4";
