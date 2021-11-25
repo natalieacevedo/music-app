@@ -12,7 +12,6 @@ function SongResultList(props) {
     } else {
       const apiUrl = `https://api.deezer.com/search/track/autocomplete?limit=15&q=${nameTyped}`;
       axios.get(apiUrl).then((response) => {
-        console.log(response.data.data);
         setSongResults(response.data.data);
       });
     }
