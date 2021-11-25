@@ -1,20 +1,25 @@
-* {
-  box-sizing: border-box;
-  margin: zero;
-}
-
-.homePage {
+.search-page-con {
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-}
-.music {
-  color: white;
-  z-index: 10;
-  font-size: 50px;
+  flex-direction: column;
 }
 
+.search-con {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border-radius: 25px;
+  padding: 0.3rem 0.8rem;
+}
+
+input.search-space {
+  background: none;
+  border: none;
+}
 .music-icon {
-  margin-bottom: 50vh;
+  position: absolute;
+  top: 0;
 }

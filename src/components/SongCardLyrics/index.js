@@ -21,8 +21,6 @@ function SongCardLyrics({ artist, title }) {
     }
   };
 
-  // console.log("hi");
-
   useEffect(() => {
     sendGetRequest();
     // eslint-disable-next-line react-hooks/exhaustive-deps

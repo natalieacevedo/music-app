@@ -1,3 +1,7 @@
-.song-results-holder {
-  margin-top: 15px;
+.song-holder {
+  height: 60vh;
+  overflow: hidden;
+}
+.hide {
+  display: none;
 }
