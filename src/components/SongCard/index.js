@@ -5,6 +5,7 @@ import { useParams } from "react-router-dom";
 import axios from "axios";
 
 function SongCard() {
+  /*
   console.log("hola");
   let songId = 3135556;
 
@@ -36,17 +37,19 @@ function SongCard() {
   // console.log(artistName);
   // console.log(songInfo.contributors[0].name);
   //console.log(songInfo.contributors[0].name);
-
-  console.log(songInfo.title);
+*/
+  //   console.log(songInfo.title);
 
   return (
-    <div>
-      <SongCardHeader />
+    <>
+      <SongCardLyrics />
+
+      {/* <SongCardHeader />
       <SongCardLyrics
         title={songInfo.title}
         artist={songInfo.contributors[0].name}
-      />
-    </div>
+      /> */}
+    </>
   );
 }
 

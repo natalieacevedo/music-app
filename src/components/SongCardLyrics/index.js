@@ -18,11 +18,13 @@ function SongCardLyrics({ artist, title }) {
     }
   };
 
+  // console.log("hi");
+
   useEffect(() => {
     sendGetRequest();
   }, []);
 
-  return <div className='new-line'>{lyrics}</div>;
+  return <div className='lyrics-con'>{lyrics}</div>;
 }
 
 export default SongCardLyrics;

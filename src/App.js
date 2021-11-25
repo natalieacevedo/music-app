@@ -1,7 +1,8 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import SearchPage from "./components/SearchPage/";
 import SongCard from "./components/SongCard";
-import SongCardLyrics from "./components/SongCardLyrics";
+
+import "./style.css";
 
 function App() {
   return (
@@ -10,9 +11,8 @@ function App() {
         <Route
           path='/'
           element={
-            <div>
+            <div className=''>
               <SearchPage />
-              <SongCardLyrics />
               <SongCard />
             </div>
           }
