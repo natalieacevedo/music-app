@@ -2,19 +2,20 @@ import React from "react";
 import { useState } from "react";
 import SearchBar from "../SearchBar";
 import video from "../../assets/videos/background_video.mp4";
+import "./style.css";
 function SearchPage() {
   const [nameTyped, setNameTyped] = useState("");
   function handleInputChange(e) {
     setNameTyped(e.target.value);
   }
   return (
-    <div>
+    <div className="homePage">
       <video
         autoPlay
         loop
         muted
         style={{
-          position: "absolute",
+          position: "fixed",
           width: "100%",
           left: "50%",
           top: "50%",
@@ -26,11 +27,13 @@ function SearchPage() {
       >
         <source src={video} type="video/mp4" />
       </video>
-      <SearchBar
-        nameTyped={nameTyped}
-        setNameTyped={setNameTyped}
-        handleInputChange={handleInputChange}
-      />
+      <div>
+        <SearchBar
+          nameTyped={nameTyped}
+          setNameTyped={setNameTyped}
+          handleInputChange={handleInputChange}
+        />
+      </div>
     </div>
   );
 }
