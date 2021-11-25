@@ -1,4 +1,5 @@
 import SongCardLyrics from "../SongCardLyrics";
+import SongCardHeader from "../SongCardHeader";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
@@ -29,6 +30,11 @@ function SongCard() {
     return (
       <div>
         <SongCardLyrics
+          title={songInfo.title}
+          artist={songInfo.contributors[0].name}
+        />
+        <SongCardHeader
+          image={songInfo.album.cover_big}
           title={songInfo.title}
           artist={songInfo.contributors[0].name}
         />
