@@ -7,6 +7,7 @@ import axios from "axios";
 
 function SongCard() {
 
+
   console.log('hola');
   let songId = 3135556
   
@@ -37,8 +38,8 @@ function SongCard() {
     console.log(`mount`)
     getAllSongInfo()
   }, []);
-
-  //<SongCardHeader title= {songInfo.title} artist={songInfo.contributors[0].name} />
+  //imagen={}
+ 
   console.log(songInfo);
 
   if (loading) {
@@ -50,7 +51,7 @@ function SongCard() {
       <div>
        
         <SongCardLyrics title= {songInfo.title} artist={songInfo.contributors[0].name} />
-        
+        <SongCardHeader image={songInfo.album.cover_big} title= {songInfo.title} artist={songInfo.contributors[0].name} />
       </div>
     );
     
