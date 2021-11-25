@@ -1,5 +1,24 @@
 .songCardHeaderMain {
-  width: 50%;
-  height: 50%;
+  display: flex;
+  justify-content: center;
+}
+
+.song-card {
+  max-width: 80vw;
+  max-height: 50vh;
   border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+}
+
+.image-song {
+  max-width: 80%;
+  max-height: 50%;
+}
+
+.song-image-container {
+  display: flex;
+  justify-content: center;
+  width: auto;
+  height: auto;
 }
