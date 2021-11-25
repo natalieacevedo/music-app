@@ -1,6 +1,7 @@
 .song-holder {
-  height: 60vh;
-  overflow: hidden;
+  max-height: 80%;
+  overflow: auto;
+  width: 100%;
 }
 .hide {
   display: none;
