@@ -27,6 +27,9 @@ function SearchPage() {
       >
         <source src={video} type="video/mp4" />
       </video>
+      <div className="music-icon">
+        <span class="material-icons music">music_note</span>
+      </div>
       <div>
         <SearchBar
           nameTyped={nameTyped}
