@@ -1,4 +1,3 @@
-import SongCardHeader from "../SongCardHeader";
 import SongCardLyrics from "../SongCardLyrics";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
@@ -21,6 +20,7 @@ function SongCard() {
   }
   useEffect(() => {
     getAllSongInfo();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   if (loading) {

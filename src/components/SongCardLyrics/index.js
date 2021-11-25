@@ -10,10 +10,13 @@ function SongCardLyrics({ artist, title }) {
       const resp = await axios.get(
         `https://api.lyrics.ovh/v1/${artist}/${title}`
       );
-      const RespData = resp.data.lyrics.slice(22);
-      setLyrics(RespData);
+      if (resp.data.lyrics.includes("Paroles de la chanson")) {
+        const RespData = resp.data.lyrics.slice(22);
+        setLyrics(RespData);
+      } else {
+        setLyrics(resp.data.lyrics);
+      }
     } catch (err) {
-      // Handle Error Here
       console.error(err);
     }
   };
@@ -22,6 +25,7 @@ function SongCardLyrics({ artist, title }) {
 
   useEffect(() => {
     sendGetRequest();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return <div className='lyrics-con'>{lyrics}</div>;
