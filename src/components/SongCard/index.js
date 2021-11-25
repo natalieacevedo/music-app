@@ -29,15 +29,17 @@ function SongCard() {
   } else {
     return (
       <div>
-        <SongCardLyrics
-          title={songInfo.title}
-          artist={songInfo.contributors[0].name}
-        />
         <SongCardHeader
           image={songInfo.album.cover_big}
           title={songInfo.title}
           artist={songInfo.contributors[0].name}
+          preview={songInfo.preview}
+          allSong={songInfo.link}
         />
+        {/*<SongCardLyrics
+          title={songInfo.title}
+          artist={songInfo.contributors[0].name}
+        />*/}
       </div>
     );
   }

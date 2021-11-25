@@ -8,14 +8,7 @@ function App() {
   return (
     <BrowserRouter basename={process.env.PUBLIC_URL}>
       <Routes>
-        <Route
-          path='/'
-          element={
-            <div className=''>
-              <SearchPage />
-            </div>
-          }
-        />
+        <Route path='/' element={<SearchPage />} />
         <Route path='/songs/:id' element={<SongCard />} />
       </Routes>
     </BrowserRouter>
