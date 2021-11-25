@@ -1,4 +1,4 @@
 function SearchPage() {
-  return <div>Search Page</div>;
+  return <div></div>;
 }
 export default SearchPage;
