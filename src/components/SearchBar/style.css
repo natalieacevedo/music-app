@@ -1,0 +1,48 @@
+.search-bar-holder {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 25px;
+  height: 35px;
+
+  padding-left: 15px;
+  border: solid 2px white;
+  background-color: white;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.search-bar-holder:hover {
+  cursor: pointer;
+}
+.iconHolderSearch {
+  flex: 1;
+  text-align: left;
+}
+.material-icons.clear {
+  padding: 10px;
+  color: black;
+}
+.material-icons.search {
+  padding: 10px;
+  color: black;
+}
+.search-space-holder {
+  background-color: transparent;
+  flex: 10;
+  text-align: center;
+}
+.search-space {
+  height: 30px;
+  border: 0px;
+  padding: 0;
+  outline: none;
+  background-color: transparent;
+}
+.clear-icon-holder {
+  flex: 1;
+  text-align: right;
+}
