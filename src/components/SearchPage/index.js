@@ -1,6 +1,12 @@
 import React from "react";
+import { useState } from "react";
+import SearchBar from "../SearchBar";
 import video from "../../assets/videos/background_video.mp4";
 function SearchPage() {
+  const [nameTyped, setNameTyped] = useState("");
+  function handleInputChange(e) {
+    setNameTyped(e.target.value);
+  }
   return (
     <div>
       <video
@@ -20,6 +26,11 @@ function SearchPage() {
       >
         <source src={video} type="video/mp4" />
       </video>
+      <SearchBar
+        nameTyped={nameTyped}
+        setNameTyped={setNameTyped}
+        handleInputChange={handleInputChange}
+      />
     </div>
   );
 }
