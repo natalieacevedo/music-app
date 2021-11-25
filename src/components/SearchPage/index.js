@@ -1,4 +1,9 @@
+import SearchBar from '../SearchBar';
 function SearchPage() {
-  return <div>Search Page</div>;
+  return (
+    <div className="searchPage">
+      <SearchBar />
+    </div>
+  );
 }
 export default SearchPage;
