@@ -23,7 +23,7 @@ function SongCardHeader({ image, title, artist, preview, allSong }) {
         </div>
 
         <div className="song-details">
-          <div>
+          <div className="song-details-text">
             <h2 className="song-title">{title}</h2>
             <h3 className="song-artist">{artist}</h3>
           </div>

@@ -92,11 +92,9 @@ body {
 
 .song-card-header {
   max-width: 500px;
-  height: 653px;
-
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   padding-bottom: 0.5rem;
 }
 .iconArrow {
@@ -120,21 +118,26 @@ body {
 .song-details {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   margin: 15px;
 }
 
+.song-details {
+}
 .buttons-container {
   display: flex;
   flex-direction: row;
+  text-align: center;
+  justify-content: center;
+  align-items: space-between;
 }
 .glow-on-hover {
   color: white;
   background-color: transparent;
   border: 2px solid #c28b87;
+  margin: 5px;
   border-radius: 25px;
   padding: 7px 20px;
-
-  margin-left: 10px;
 }
 
 .audio-control {
@@ -180,20 +183,4 @@ audio::-webkit-media-controls-volume-slider {
 .allSong-button {
   padding: 5px;
   border-radius: 10px;
-}
-@media screen and (min-width: 700px) {
-  .songCardHeaderMain {
-    display: flex;
-    flex-direction: column;
-    margin-top: 0;
-  }
-
-  .audio-control {
-    display: flex;
-    justify-content: center;
-    margin-top: 5px;
-    width: 50%;
-    margin-left: auto;
-    margin-right: auto;
-  }
 }
