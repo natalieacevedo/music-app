@@ -3,10 +3,11 @@ import Album from "../Album";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
-
+import SongCardLyrics from "../SongCardLyrics";
+import "./style.css";
 function SongCard() {
   let songId = useParams().id;
-
+  const [showLyr, setShowLyr] = useState(false);
   let [loading, setLoading] = useState(true);
   let [songInfo, setSongInfo] = useState([]);
   function getAllSongInfo() {
@@ -30,11 +31,21 @@ function SongCard() {
       <div className='song-card'>
         <SongCardHeader
           image={songInfo.album.cover_big}
-          title={songInfo.title}
           artist={songInfo.contributors[0].name}
+          title={songInfo.title}
           preview={songInfo.preview}
           allSong={songInfo.link}
+          showLyr={showLyr}
+          setShowLyr={setShowLyr}
         />
+        {showLyr && (
+          <SongCardLyrics
+            artist={songInfo.contributors[0].name}
+            title={songInfo.title}
+            showLyr={showLyr}
+            setShowLyr={setShowLyr}
+          />
+        )}
         <Album albumId={songInfo.album.id} />
       </div>
     );

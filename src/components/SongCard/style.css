@@ -1,9 +1,7 @@
-.song-card {
-  max-width: 500px;
-  width: 80%;
-  height: 653px;
-  border: 5px solid #7d8136;
-}
-
-@media screen and (min-width: 550px) {
+@media screen and (min-width: 1000px) {
+  .song-card {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+  }
 }

@@ -9,7 +9,8 @@
 }
 
 .close-lyr {
-  right: 5%;
+  right: 0.8rem;
+  top: 0.8rem;
   position: absolute;
   cursor: pointer;
 }
@@ -17,13 +18,18 @@
 .text-wrap {
   text-align: center;
   width: 100%;
-  overflow: auto;
 }
 .container {
   width: 100%;
   position: absolute;
-  height: 100vh;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  top: 0;
+  z-index: 10;
+}
+.text {
+  padding: 2.2rem 0;
+  background-color: rgb(0 0 0 / 83%);
 }

@@ -37,7 +37,9 @@ function SongCardLyrics({ artist, title, setShowLyr, showLyr }) {
         <div className='close-lyr' onClick={() => setShowLyr(!showLyr)}>
           <span className='material-icons clear'>clear</span>
         </div>
-        <div className='text-wrap'>{lyrics}</div>
+        <div className='text-wrap'>
+          <p className='text'>{lyrics}</p>
+        </div>
       </div>
     </div>
   );
