@@ -4,6 +4,7 @@ body {
 /*+++++++button effect++++++++++++++*/
 
 .glow-on-hover {
+  margin: 0.5rem;
   width: 100px;
   height: 40px;
   border: none;

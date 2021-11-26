@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './style.css';
 import SongCardLyrics from '../SongCardLyrics';
 import { Link } from 'react-router-dom';
 
 import image from '../../images/Better-Call-Saul.jpeg';
 function SongCardHeader({ image, title, artist, preview, allSong }) {
+  const [showLyr, setShowLyr] = useState(false);
   function handleButtonClick() {
     window.open(allSong, '_blank');
   }
@@ -28,6 +29,12 @@ function SongCardHeader({ image, title, artist, preview, allSong }) {
           </div>
 
           <div className="allSong-button-container">
+            <button
+              className="glow-on-hover"
+              onClick={() => setShowLyr(!showLyr)}
+            >
+              Lyrics
+            </button>
             <button className="glow-on-hover" onClick={handleButtonClick}>
               Full Song
             </button>
@@ -40,7 +47,14 @@ function SongCardHeader({ image, title, artist, preview, allSong }) {
           </audio>
         </div>
       </div>
-      {/* <SongCardLyrics title={title} artist={artist} /> */}
+      {showLyr && (
+        <SongCardLyrics
+          showLyr={showLyr}
+          setShowLyr={setShowLyr}
+          title={title}
+          artist={artist}
+        />
+      )}
     </div>
   );
 }
