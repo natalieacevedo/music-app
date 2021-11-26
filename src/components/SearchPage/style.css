@@ -10,3 +10,18 @@
   position: absolute;
   top: 0;
 }
+
+@media screen and (min-width: 550px) {
+  .search-page-center {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .search-page-con {
+    border-radius: 30px;
+    width: 500px;
+    border: 5px solid pink;
+    height: 90vh;
+  }
+}

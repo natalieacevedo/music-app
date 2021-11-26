@@ -1,5 +1,4 @@
 import React from 'react';
-import SongResultsList from '../SongResultsList';
 import { useState } from 'react';
 import SearchBar from '../SearchBar';
 import video from '../../assets/videos/background_video.mp4';
@@ -30,15 +29,17 @@ function SearchPage() {
       >
         <source src={video} type="video/mp4" />
       </video>
-      <div className="search-page-con">
-        <div className="music-icon">
-          <span className="material-icons music">music_note</span>
+      <div className="search-page-center">
+        <div className="search-page-con">
+          <div className="music-icon">
+            <span className="material-icons music">music_note</span>
+          </div>
+          <SearchBar
+            nameTyped={nameTyped}
+            setNameTyped={setNameTyped}
+            handleInputChange={handleInputChange}
+          />
         </div>
-        <SearchBar
-          nameTyped={nameTyped}
-          setNameTyped={setNameTyped}
-          handleInputChange={handleInputChange}
-        />
       </div>
     </>
   );

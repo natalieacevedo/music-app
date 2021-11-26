@@ -28,7 +28,7 @@ function SongCardHeader({ image, title, artist, preview, allSong }) {
             <h3 className="song-artist">{artist}</h3>
           </div>
 
-          <div className="allSong-button-container">
+          <div className="buttons-container">
             <button
               className="glow-on-hover"
               onClick={() => setShowLyr(!showLyr)}
@@ -42,9 +42,7 @@ function SongCardHeader({ image, title, artist, preview, allSong }) {
         </div>
 
         <div className="audio-control">
-          <audio controls className="audio">
-            <source src={preview} type="audio/mpeg"></source>
-          </audio>
+          <audio src={preview} controls className="audio"></audio>
         </div>
       </div>
       {showLyr && (
