@@ -1,33 +1,35 @@
-import "./style.css";
+import React from 'react';
+import './style.css';
+import SongResultsList from '../SongResultsList';
+
 function SearchBar(props) {
   const { nameTyped, setNameTyped, handleInputChange } = props;
   return (
-    <div className='search-bar-holder'>
-      <div className='search-icon-holder'>
-        <span className='material-icons search'>search</span>
-      </div>
+    <>
+      <div className="search-con">
+        <span className="material-icons search">search</span>
 
-      <div className='search-space-holder'>
         <input
-          className='search-space'
-          id='fullName'
-          type='text'
-          autoComplete='off'
-          placeholder='Search Song'
+          className="search-space"
+          id="fullName"
+          type="text"
+          autoComplete="off"
+          placeholder="Search Song"
           value={nameTyped}
           onChange={(e) => handleInputChange(e)}
         />
-      </div>
 
-      <div
-        className='clear-icon-holder'
-        onClick={() => {
-          setNameTyped("");
-        }}
-      >
-        <span className='material-icons clear'>clear</span>
+        <div
+          className="clear-icon-holder"
+          onClick={() => {
+            setNameTyped('');
+          }}
+        >
+          <span className="material-icons clear">clear</span>
+        </div>
       </div>
-    </div>
+      <SongResultsList nameTyped={nameTyped} />
+    </>
   );
 }
 export default SearchBar;

@@ -2,7 +2,8 @@ import React, { useEffect, useState } from "react";
 import "./style.css";
 const axios = require("axios");
 
-function SongCardLyrics({ artist, title }) {
+function SongCardLyrics({ artist, title, setShowLyr, showLyr }) {
+  console.log(artist, title);
   const [lyrics, setLyrics] = useState("");
 
   const sendGetRequest = async () => {
@@ -15,20 +16,33 @@ function SongCardLyrics({ artist, title }) {
         setLyrics(RespData);
       } else {
         setLyrics(resp.data.lyrics);
+        console.log(resp.data.lyrics);
       }
     } catch (err) {
       console.error(err);
+      setShowLyr(false);
     }
   };
 
-  // console.log("hi");
-
   useEffect(() => {
-    sendGetRequest();
+    if (artist) {
+      sendGetRequest();
+    }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  return <div className='lyrics-con'>{lyrics}</div>;
+  return (
+    <div className='container'>
+      <div className='lyrics-con'>
+        <div className='close-lyr' onClick={() => setShowLyr(!showLyr)}>
+          <span className='material-icons clear'>clear</span>
+        </div>
+        <div className='text-wrap'>
+          <p className='text'>{lyrics}</p>
+        </div>
+      </div>
+    </div>
+  );
 }
 
 export default SongCardLyrics;

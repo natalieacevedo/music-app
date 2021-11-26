@@ -1,5 +1,4 @@
 import React from "react";
-import SongResultsList from "../SongResultsList";
 import { useState } from "react";
 import SearchBar from "../SearchBar";
 import video from "../../assets/videos/background_video.mp4";
@@ -11,7 +10,7 @@ function SearchPage() {
     setNameTyped(e.target.value);
   }
   return (
-    <div className='homePage'>
+    <>
       <video
         autoPlay
         loop
@@ -25,22 +24,24 @@ function SearchPage() {
           objectFit: "cover",
           transform: "translate(-50%, -50%)",
           zIndex: "-1",
+          display: "flex",
         }}
       >
         <source src={video} type='video/mp4' />
       </video>
-      <div className='music-icon'>
-        <span className='material-icons music'>music_note</span>
+      <div className='search-page-center'>
+        <div className='search-page-con'>
+          <div className='music-icon'>
+            <span className='material-icons music'>music_note</span>
+          </div>
+          <SearchBar
+            nameTyped={nameTyped}
+            setNameTyped={setNameTyped}
+            handleInputChange={handleInputChange}
+          />
+        </div>
       </div>
-      <div>
-        <SearchBar
-          nameTyped={nameTyped}
-          setNameTyped={setNameTyped}
-          handleInputChange={handleInputChange}
-        />
-        <SongResultsList nameTyped={nameTyped} />
-      </div>
-    </div>
+    </>
   );
 }
 export default SearchPage;
