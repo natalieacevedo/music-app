@@ -27,7 +27,7 @@ function SongCard() {
     return <div>Loading...</div>;
   } else {
     return (
-      <div>
+      <div className='song-card'>
         <SongCardHeader
           image={songInfo.album.cover_big}
           title={songInfo.title}
