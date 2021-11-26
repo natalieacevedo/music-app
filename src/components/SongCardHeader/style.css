@@ -93,12 +93,11 @@ body {
 
 .song-card-header {
   max-width: 500px;
-  /* width: 80%;
-  height: 653px;
-  border: 5px solid #c28b87; */
+  width: 80%;
+  border: 5px solid #c28b87;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   padding-bottom: 0.5rem;
   border-radius: 30px;
 }
@@ -127,8 +126,6 @@ body {
   margin: 15px;
 }
 
-.song-details {
-}
 .buttons-container {
   display: flex;
   flex-direction: row;
@@ -151,6 +148,7 @@ body {
   margin-top: 5px;
 }
 .audio {
+  max-width: 320px;
   width: 80vw;
   border-radius: 25px;
   border: 2px solid #c28b87;
