@@ -1,4 +1,3 @@
-import SongCardLyrics from "../SongCardLyrics";
 import SongCardHeader from "../SongCardHeader";
 import Album from "../Album";
 import { useState, useEffect } from "react";

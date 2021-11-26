@@ -29,15 +29,17 @@ function SearchPage() {
       >
         <source src={video} type='video/mp4' />
       </video>
-      <div className='search-page-con'>
-        <div className='music-icon'>
-          <span className='material-icons music'>music_note</span>
+      <div className='search-page-center'>
+        <div className='search-page-con'>
+          <div className='music-icon'>
+            <span className='material-icons music'>music_note</span>
+          </div>
+          <SearchBar
+            nameTyped={nameTyped}
+            setNameTyped={setNameTyped}
+            handleInputChange={handleInputChange}
+          />
         </div>
-        <SearchBar
-          nameTyped={nameTyped}
-          setNameTyped={setNameTyped}
-          handleInputChange={handleInputChange}
-        />
       </div>
     </>
   );

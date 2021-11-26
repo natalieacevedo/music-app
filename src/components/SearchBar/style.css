@@ -7,6 +7,7 @@
   border-radius: 25px;
   padding: 0.3rem 0.8rem;
   width: 90%;
+  max-width: 500px;
 }
 
 input.search-space {
