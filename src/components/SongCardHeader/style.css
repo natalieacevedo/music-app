@@ -5,7 +5,6 @@ body {
 .song-image-container img {
   width: 100%;
   height: auto;
-  border-radius: 24px;
 }
 .songCardHeaderMain {
   align-items: center;
@@ -20,7 +19,6 @@ body {
   flex-direction: column;
   justify-content: space-between;
   padding-bottom: 0.5rem;
-  border-radius: 30px;
 }
 .iconArrow {
   align-self: flex-start;
@@ -47,8 +45,6 @@ body {
   margin: 15px;
 }
 
-.song-details {
-}
 .buttons-container {
   display: flex;
   flex-direction: row;
@@ -71,6 +67,7 @@ body {
   margin-top: 5px;
 }
 .audio {
+  max-width: 320px;
   width: 80vw;
   border-radius: 25px;
   border: 2px solid #c28b87;
@@ -115,5 +112,9 @@ audio::-webkit-media-controls-volume-slider {
     width: 80%;
     height: 660px;
     border: 5px solid #c28b87;
+    border-radius: 30px;
+  }
+  .song-image-container img {
+    border-radius: 24px;
   }
 }
